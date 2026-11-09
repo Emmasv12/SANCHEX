@@ -2,10 +2,10 @@
    CAPA3D · JavaScript
    ========================================================= */
 
-/* ---------- CONFIGURACIÓN (edita esto) ---------- */
+/* ---------- CONFIGURACIÓN ---------- */
 const CONFIG = {
   // Tu correo: aquí llegarán los pedidos y mensajes.
-  email: 'tucorreo@ejemplo.com',
+  email: 'sanchex3d@gmail.com',
 
   // Opcional: si creas un formulario en https://formspree.io pega aquí su URL
   // (ej.: 'https://formspree.io/f/xxxxxxx'). Con eso los formularios se envían
