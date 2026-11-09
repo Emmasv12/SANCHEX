@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANCHEX-3D · Impresión 3D</title>
+  <meta name="description" content="Impresión 3D personalizada, decorativa y funcional. Hecha con cariño en una Creality Ender-3 Pro.">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ CABECERA / NAVEGACIÓN ============ -->
+  <header class="site-header" id="inicio-top">
+    <div class="container nav-wrap">
+      <a href="#inicio" class="brand" aria-label="SANCHEX-3D, ir al inicio">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span>SANCHEX-3D</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#sobre-mi">Sobre nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#precios">Precios</a>
+        <a href="#personalizado">Pedido personalizado</a>
+        <a href="#contacto" class="btn btn-small">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ BANNER ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero-shapes" aria-hidden="true">
+        <span class="shape s1"></span>
+        <span class="shape s2"></span>
+        <span class="shape s3"></span>
+      </div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Impresión 3D hecha a mano</p>
+        <h1>Tus ideas, <span class="grad">capa a capa</span>.</h1>
+        <p class="lead">Imprimibles personalizados, decorativos y funcionales. Si lo puedes imaginar, lo intentamos imprimir.</p>
+        <div class="hero-actions">
+          <a href="#galeria" class="btn">Ver mis trabajos</a>
+          <a href="#personalizado" class="btn btn-ghost">Pedir algo a medida</a>
+        </div>
+        <ul class="hero-badges">
+          <li>✔ Piezas únicas</li>
+          <li>✔ Colores a elegir</li>
+          <li>✔ Trato cercano</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section" id="sobre-mi">
+      <div class="container about">
+        <div class="about-media reveal">
+          <img src="img/sobre-mi.jpg" alt="Nuestras impresoras 3D en acción" loading="lazy">
+          <div class="about-tag">Creality Ender-3 Pro & Ender V1 pro</div>
+        </div>
+        <div class="about-text reveal">
+          <p class="eyebrow dark">Sobre nosotros</p>
+          <h2>Cómo empezó todo</h2>
+          <!-- ✏️ EDITA ESTE TEXTO CON TU HISTORIA REAL -->
+          <p>Todo empezó con curiosidad: veiamos objetos en internet que queriamos y descubrimos que podíamos fabricarla nosotros mismos.</p>
+          <p>Compramos nuestra primera impresora, una Ender V1 pro y una Creality Ender-3 Pro, y lo que iba a ser un experimento acabó convirtiéndose en una pasión.</p>
+          <p>Primero imprimíamos cosas para nosotros; luego, para amigos y familia. Cuando empezaron a pedirnos llaveros, regalos y soportes a medida, nos dimos cuenta de que había nacido un pequeño negocio.</p>
+          <p>Hoy cada pieza que sale de nuestras impresoras pasa por nuestras manos: la diseñamos o la preparamos, la imprimimos, la revisamos y la acabamos con cariño.</p>
+          <ul class="about-stats">
+            <li><strong>100%</strong><span>Hecho a mano</span></li>
+            <li><strong>PLA</strong><span>Y otros materiales</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="section section-alt" id="galeria">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow dark">Galería</p>
+          <h2>Cosas que hemos impreso</h2>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="Categorías de la galería" id="galTabs"></div>
+        <div id="galPanels"></div>
+      </div>
+    </section>
+
+    <!-- ============ PRECIOS ============ -->
+    <section class="section" id="precios">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow dark">Precios</p>
+          <h2>Lo que cuesta cada cosa</h2>
+          <p>Precios orientativos. El precio final depende del tamaño, el material y el tiempo de impresión.</p>
+        </header>
+        <div class="price-grid" id="priceGrid"></div>
+        <p class="note reveal">💡 ¿Algo que no ves aquí? Pídenos presupuesto sin compromiso en la sección de pedido personalizado.</p>
+      </div>
+    </section>
+
+    <!-- ============ PEDIDO PERSONALIZADO ============ -->
+    <section class="section section-alt" id="personalizado">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow dark">Pedido personalizado</p>
+          <h2>Cuéntanos qué quieres imprimir</h2>
+          <p>Sube tu archivo, pásame un enlace o simplemente cuéntanos tu idea.</p>
+        </header>
+
+        <form class="card form reveal" id="formPedido" novalidate>
+          <div class="grid-2">
+            <div class="field">
+              <label for="pNombre">Nombre *</label>
+              <input type="text" id="pNombre" name="nombre" required autocomplete="name">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="pEmail">Correo electrónico *</label>
+              <input type="email" id="pEmail" name="email" required autocomplete="email">
+              <small class="error" aria-live="polite"></small>
+            </div>
+          </div>
+
+          <fieldset class="field choice">
+            <legend>¿Qué tienes?</legend>
+            <label class="chip"><input type="radio" name="tipo" value="archivo" checked><span>📁 Tengo un archivo</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="enlace"><span>🔗 Tengo un enlace</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="idea"><span>💡 Solo una idea</span></label>
+          </fieldset>
+
+          <div class="field" data-show="archivo">
+            <label for="pArchivo">Archivo (STL, OBJ, 3MF, STEP…)</label>
+            <label class="dropzone" for="pArchivo" id="dropzone">
+              <input type="file" id="pArchivo" name="archivo" accept=".stl,.obj,.3mf,.step,.stp,.gcode,.png,.jpg,.jpeg,.pdf">
+              <span class="dz-icon" aria-hidden="true">⬆</span>
+              <span class="dz-text" id="dzText">Arrastra tu archivo aquí o haz clic para elegirlo</span>
+            </label>
+          </div>
+
+          <div class="field" data-show="enlace" hidden>
+            <label for="pEnlace">Enlace del producto</label>
+            <input type="url" id="pEnlace" name="enlace" placeholder="https://www.printables.com/...">
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="pMaterial">Material / acabado</label>
+              <select id="pMaterial" name="material">
+                <option>PLA (el más habitual)</option>
+                <option>PLA+ (mejor resistencia)</option>
+                <option>ABS (más resistente)</option>
+                <option>PETG (buen equilibrio)</option>
+                <option>ASA (alta resistencia térmica)</option>
+                <option>TPU (flexible y elástico)</option>
+                <option>No lo sé, aconséjadme</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="pColor">Color preferido</label>
+              <input type="text" id="pColor" name="color" placeholder="Ej.: blanco, negro, rojo, azul…">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="pComentarios" id="lblComentarios">Comentarios</label>
+            <textarea id="pComentarios" name="comentarios" rows="5" placeholder="Cuéntanos tamaño, uso, ideas, referencias… Si no tienes archivo, descríbenos lo que imaginas."></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <button type="submit" class="btn btn-block">Enviar pedido</button>
+          <p class="form-status" id="statusPedido" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div class="contact-info reveal">
+          <p class="eyebrow dark">Contacto</p>
+          <h2>Hablemos</h2>
+          <p>¿Dudas, ideas o quieres saber el precio de algo concreto? Escríbenos y te respondemos lo antes posible.</p>
+          <ul class="info-list">
+            <li><span aria-hidden="true">📞</span><a href="tel:+34605196682">+34 605 196 682</a></li>
+            <li><span aria-hidden="true">✉️</span><a href="mailto:sanchex3d@gmail.com">sanchex3d@gmail.com</a></li>
+            <li><span aria-hidden="true">🕒</span>Respondo en 24-48 h</li>
+          </ul>
+        </div>
+
+        <form class="card form reveal" id="formContacto" novalidate>
+          <div class="field">
+            <label for="cNombre">Nombre *</label>
+            <input type="text" id="cNombre" name="nombre" required autocomplete="name">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="cEmail">Correo *</label>
+              <input type="email" id="cEmail" name="email" required autocomplete="email">
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="cTelefono">Teléfono (opcional)</label>
+              <input type="tel" id="cTelefono" name="telefono" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="cAsunto">Asunto</label>
+            <input type="text" id="cAsunto" name="asunto">
+          </div>
+          <div class="field">
+            <label for="cMensaje">Mensaje *</label>
+            <textarea id="cMensaje" name="mensaje" rows="5" required></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn btn-block">Enviar mensaje</button>
+          <p class="form-status" id="statusContacto" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#inicio" class="brand brand-light">
+          <img src="img/logo.svg" alt="" width="36" height="36">
+          <span><strong>SANCHEX-3D</strong></span>
+        </a>
+        <p class="footer-claim">Impresión 3D personalizada, decorativa y funcional.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="#sobre-mi">Sobre nosotros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#personalizado">Pedido personalizado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>📞 <a href="tel:+34605196682">+34 605 196 682</a></li>
+          <li>✉️ <a href="mailto:sanchex3d@gmail.com">sanchex3d@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> SANCHEX-3D. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Volver arriba" hidden>↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

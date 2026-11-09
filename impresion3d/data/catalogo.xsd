@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Esquema XSD del catálogo. Sirve para validar que catalogo.xml está bien escrito.
+  En VS Code, instala la extensión "XML" de Red Hat y te avisará de los errores.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="catalogo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="categoria" type="tipoCategoria" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:unique name="idCategoriaUnico">
+      <xs:selector xpath="categoria"/>
+      <xs:field xpath="@id"/>
+    </xs:unique>
+    <xs:unique name="idProductoUnico">
+      <xs:selector xpath="categoria/producto"/>
+      <xs:field xpath="@id"/>
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="tipoCategoria">
+    <xs:sequence>
+      <xs:element name="descripcion" type="xs:string"/>
+      <xs:element name="producto" type="tipoProducto" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="nombre" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tipoProducto">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="descripcion" type="xs:string"/>
+      <xs:element name="precio" type="tipoPrecio"/>
+      <xs:element name="imagen" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tipoPrecio">
+    <xs:simpleContent>
+      <xs:extension base="precioPositivo">
+        <xs:attribute name="moneda" type="xs:string" use="required"/>
+        <xs:attribute name="desde" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="precioPositivo">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

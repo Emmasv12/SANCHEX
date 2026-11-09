@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  CATÁLOGO: aquí editas tus productos y precios.
+  La galería y la sección de precios de la web se generan desde este archivo.
+  Para añadir un producto, copia un bloque <producto> dentro de su categoría.
+  Las imágenes van en la carpeta img/ (ej.: img/mi-foto.jpg).
+-->
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="catalogo.xsd">
+
+  <categoria id="personalizados" nombre="Imprimibles personalizados">
+    <descripcion>Diseños hechos a tu gusto: nombres, regalos y piezas únicas.</descripcion>
+    <producto id="p1">
+      <nombre>Llavero con nombre</nombre>
+      <descripcion>Tu nombre o el que quieras, en el color que elijas.</descripcion>
+      <precio moneda="EUR" desde="false">3.50</precio>
+      <imagen>img/gal-personalizados-1.svg</imagen>
+    </producto>
+    <producto id="p2">
+      <nombre>Placa de puerta o escritorio</nombre>
+      <descripcion>Placas con texto y relieve personalizado.</descripcion>
+      <precio moneda="EUR" desde="true">8.00</precio>
+      <imagen>img/gal-personalizados-2.svg</imagen>
+    </producto>
+    <producto id="p3">
+      <nombre>Figura personalizada</nombre>
+      <descripcion>Tu personaje, mascota o idea hecha figura.</descripcion>
+      <precio moneda="EUR" desde="true">15.00</precio>
+      <imagen>img/gal-personalizados-3.svg</imagen>
+    </producto>
+    <producto id="p4">
+      <nombre>Soporte a medida</nombre>
+      <descripcion>Soportes pensados para tu objeto exacto.</descripcion>
+      <precio moneda="EUR" desde="true">10.00</precio>
+      <imagen>img/gal-personalizados-4.svg</imagen>
+    </producto>
+    <producto id="p5">
+      <nombre>Caja de regalo personalizada</nombre>
+      <descripcion>Cajitas con tapa y grabado para regalar.</descripcion>
+      <precio moneda="EUR" desde="true">12.00</precio>
+      <imagen>img/gal-personalizados-5.svg</imagen>
+    </producto>
+  </categoria>
+
+  <categoria id="decorativos" nombre="Imprimibles decorativos">
+    <descripcion>Detalles para dar vida a tu casa, tu escritorio o tu estantería.</descripcion>
+    <producto id="d1">
+      <nombre>Maceta geométrica</nombre>
+      <descripcion>Macetas modernas para plantas pequeñas y suculentas.</descripcion>
+      <precio moneda="EUR" desde="false">6.00</precio>
+      <imagen>img/gal-decorativos-1.svg</imagen>
+    </producto>
+    <producto id="d2">
+      <nombre>Lámpara litofanía</nombre>
+      <descripcion>Una foto que cobra vida al encender la luz.</descripcion>
+      <precio moneda="EUR" desde="true">18.00</precio>
+      <imagen>img/gal-decorativos-2.svg</imagen>
+    </producto>
+    <producto id="d3">
+      <nombre>Figura low-poly</nombre>
+      <descripcion>Animales y figuras de estilo facetado.</descripcion>
+      <precio moneda="EUR" desde="false">9.00</precio>
+      <imagen>img/gal-decorativos-3.svg</imagen>
+    </producto>
+    <producto id="d4">
+      <nombre>Marco decorativo</nombre>
+      <descripcion>Marcos con relieve para fotos pequeñas.</descripcion>
+      <precio moneda="EUR" desde="false">7.00</precio>
+      <imagen>img/gal-decorativos-4.svg</imagen>
+    </producto>
+    <producto id="d5">
+      <nombre>Dragón articulado</nombre>
+      <descripcion>Se imprime ya montado y se mueve de verdad.</descripcion>
+      <precio moneda="EUR" desde="false">12.00</precio>
+      <imagen>img/gal-decorativos-5.svg</imagen>
+    </producto>
+  </categoria>
+
+  <categoria id="funcionales" nombre="Imprimibles funcionales">
+    <descripcion>Piezas útiles que resuelven problemas del día a día.</descripcion>
+    <producto id="f1">
+      <nombre>Soporte para auriculares</nombre>
+      <descripcion>Para tener el escritorio ordenado.</descripcion>
+      <precio moneda="EUR" desde="false">9.00</precio>
+      <imagen>img/gal-funcionales-1.svg</imagen>
+    </producto>
+    <producto id="f2">
+      <nombre>Organizador de escritorio</nombre>
+      <descripcion>Bolis, clips y todo lo pequeño en su sitio.</descripcion>
+      <precio moneda="EUR" desde="false">11.00</precio>
+      <imagen>img/gal-funcionales-2.svg</imagen>
+    </producto>
+    <producto id="f3">
+      <nombre>Soporte de móvil</nombre>
+      <descripcion>Plegable o fijo, para mesa o coche.</descripcion>
+      <precio moneda="EUR" desde="false">5.00</precio>
+      <imagen>img/gal-funcionales-3.svg</imagen>
+    </producto>
+    <producto id="f4">
+      <nombre>Clips para cables (pack)</nombre>
+      <descripcion>Pack de clips para sujetar cables.</descripcion>
+      <precio moneda="EUR" desde="false">3.00</precio>
+      <imagen>img/gal-funcionales-4.svg</imagen>
+    </producto>
+    <producto id="f5">
+      <nombre>Ganchos de pared (pack)</nombre>
+      <descripcion>Ganchos resistentes para colgar lo que quieras.</descripcion>
+      <precio moneda="EUR" desde="false">4.00</precio>
+      <imagen>img/gal-funcionales-5.svg</imagen>
+    </producto>
+  </categoria>
+
+</catalogo>
